@@ -196,6 +196,8 @@ header.shadow{
 
 
 
+
+
 .user p{
     font-size: 0.938rem;
 }
@@ -207,6 +209,87 @@ header.shadow{
     right: 1rem;
     transition: 0.2s;
 }
+
+-------------------------------------------------
+.register_page {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 110%;
+    right: 1rem;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 300px;
+    z-index: 1000;
+}
+
+.register_page.active {
+    display: block; /* Show when active */
+}
+
+
+.register_page .heading{
+	text-align: center;
+}
+
+
+.register_page .heading h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+.register_page .heading span{
+    padding: 0.2rem 1.2rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 500;
+    display: inline-block;
+    text-transform: uppercase;
+    clip-path: polygon(100% 0, 93% 50%, 86% 99%, 0% 100%, 7% 47%, 13% 0%);
+}
+
+
+.register_page .user_reg{
+	position: absolute;
+    right: -100%;
+    top: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 300px;
+}
+
+.register_page .user_reg input{
+    border: none;
+    outline: none;
+    background-color: var(--second-color);
+    padding: 10px;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.register_page .user_reg .Register-btn{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.register_page .user_reg .Register-btn:hover{
+    background-color: var(--text-color);
+}
+
+
+----------------------------------------------------------------------------------
 .home{
     width: 100%;
     min-height: 100vh;

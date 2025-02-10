@@ -71,6 +71,31 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0)
 });
 
+
+
+// Get the "Create One" button and the registration form
+const createAccountButton = document.querySelector('#create-account');
+const registerPage = document.querySelector('.register_page');
+
+// Event listener for the "Create One" button
+createAccountButton.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent the default link behavior
+    registerPage.classList.toggle('active'); // Toggle the visibility of the registration form
+    user.classList.remove('active'); // Hide the login form if it's visible
+});
+
+// Close the registration form when clicking outside of it
+document.addEventListener('click', (e) => {
+    if (!registerPage.contains(e.target) && !createAccountButton.contains(e.target)) {
+        registerPage.classList.remove('active');
+    }
+});
+
+
+
+
+
+
 // JavaScript for Login Page
 
 // Get the login form and its elements
